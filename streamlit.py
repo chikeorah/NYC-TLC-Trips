@@ -39,7 +39,7 @@ st.components.v1.html(custom_html)
 st.sidebar.subheader("Subheading")
 st.sidebar.text("Sidebar content goes here.")
 
-#PULocationID,DOLocationID,is_holiday,hour,week_day,month,request_time_group,temp,weather_condition_code
+#PULocationID,DOLocationID,is_holiday,hour,week_day,month,request_time_group,weather_condition_code
 
 #Location
 taxi_zone_df = pd.read_csv('data/taxi_zone_lookup.csv')
