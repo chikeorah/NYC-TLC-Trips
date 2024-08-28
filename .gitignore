@@ -161,3 +161,4 @@ cython_debug/
 
 #don't upload data files
 data/
+**/.DS_Store
