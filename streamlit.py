@@ -7,7 +7,7 @@ import pickle
 
 
 #load in model
-filename = 'lr_model.pkl'
+filename = 'Random_Forest_all.pkl'
 loaded_model = pickle.load(open(filename, 'rb'))
 
 
