@@ -64,6 +64,9 @@ week_day = selected_date.weekday()
 month = selected_date.month
 #st.write('The month given is ', month)
 
+#week_number
+week_number = selected_date.isocalendar()[1]
+
 #Load holiday data
 holiday_data = pd.read_csv('sdata/nyc_holiday.csv')
 #return 0 or 1 if selected_date is a holiday
@@ -123,7 +126,7 @@ if predict_button:
     if weekend_mask & (hour >= 6) & (hour < 22):
         request_time_group = 1
 
-    st.write(PULocationID, DOLocationID, int(is_holiday), hour, week_day, month, request_time_group, weather_condition_code)
+    st.write(PULocationID, DOLocationID, int(is_holiday), hour, week_day, week_number, month, request_time_group, weather_condition_code)
     result = loaded_model.predict([[PULocationID, DOLocationID, int(is_holiday), hour, week_day, month,request_time_group, weather_condition_code]])
 
     #convert result which is in seconds to minutes
