@@ -7,7 +7,7 @@ import pickle
 
 
 #load in model
-filename = 'lr_model.pkl'
+filename = 'model.pkl'
 loaded_model = pickle.load(open(filename, 'rb'))
 
 
