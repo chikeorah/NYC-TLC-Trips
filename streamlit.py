@@ -127,7 +127,7 @@ if predict_button:
         request_time_group = 1
 
     st.write(PULocationID, DOLocationID, int(is_holiday), hour, week_day, week_number, month, request_time_group, weather_condition_code)
-    result = loaded_model.predict([[PULocationID, DOLocationID, int(is_holiday), hour, week_day, month,request_time_group, weather_condition_code]])
+    result = loaded_model.predict([[PULocationID, DOLocationID, int(is_holiday), hour, week_day, week_number, month,request_time_group, weather_condition_code]])
 
     #convert result which is in seconds to minutes
     result = int(result)/60
